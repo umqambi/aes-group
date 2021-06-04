@@ -1,0 +1,353 @@
+@font-face {
+    font-family: Gilroy; /* Имя шрифта */
+    src: url('/assets/fonts/gilroy.otf'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: GilroyExtraBold; /* Имя шрифта */
+    src: url('/assets/fonts/gilroy-extrabold.otf'); /* Путь к файлу со шрифтом */
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    /* site font stiles */
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+
+}
+.btn-red {
+    background-color: #E20513;
+    color: #FFFFFF;
+}
+.text-red {color: #E20513}
+/* header stiles */
+#header .navbar-light .navbar-nav .nav-item { padding-left: 1rem; padding-right: 1rem;}
+#header .navbar-light .navbar-nav .nav-link {
+    color: #060606;
+    position: relative;
+}
+#header .navbar-light .navbar-nav .nav-link:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #E20513; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+#header .navbar-light .navbar-nav .nav-link:hover:after {width: 100%;}
+#header .nav-item {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    text-transform: uppercase;
+} 
+.header-tel {display: flex; flex-direction: column; margin-left: 4rem; font-size: 18px; line-height: 21px;}
+.header-tel a {text-decoration: none; color: #060606;}
+
+/* baner styles */
+
+#baner-main .bg-dark {
+    background-image: url(/assets/img/aes-baner-big.jpg);
+    background-position: center;
+}
+.baner-main_content {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.baner-main_content h1 {
+    font-family: GilroyExtraBold;
+    font-size: 60px
+
+}
+.baner-main_content p {
+    font-family: Gilroy;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+.baner-main_content button {
+    margin-top: 70px;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 22px 62px;
+}
+/* o nas */
+#o-nas {padding-top: 140px; padding-bottom: 140px;}
+#o-nas .head {
+    font-family: GilroyExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 74px;
+    text-transform: uppercase;
+    color: #000000;
+}
+#o-nas .data { margin-top: 40px;}
+#o-nas .data_skidki {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #FF0000;
+}
+#o-nas .data_text p { margin-bottom: 2rem;}
+#o-nas .data_promo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#o-nas .promo-item {}
+#o-nas .item-first{padding-right: 40px;}
+#o-nas .item-last{padding-left: 40px;}
+#o-nas .item-middle{padding-right: 40px;padding-left: 40px;}
+#o-nas .promo_num {
+    font-family: GilroyExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #060606;
+}
+#o-nas .promo_text {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #060606;
+}
+/* advantage */
+#advantage {padding-top: 130px; padding-bottom: 130px; background: #C9C9C9;}
+#advantage .head{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 70px;
+}
+.advantage_item {width: 85%;}
+.advantage_item .img-wrap {display: flex; min-height: 160px;}
+.advantage_item img {width: max-content; height: max-content; margin-left: auto; margin-right: auto; margin-top: auto;}
+.advantage_item .advantage_name {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #060606;
+    padding: 3px 14px;
+    margin-top: 30px;
+    margin-bottom: 36px;
+}
+.advantage_item .advantage_text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+.advantage_items .item-first .advantage_item, .advantage_items .item-middle .advantage_item, .advantage_items .item-last .advantage_item {margin-left: auto; margin-right: auto; padding-bottom: 2rem;}
+.advantage_items .item-middle { border-style: none solid; border-color: #FF0000;  }
+
+/* portfolio */
+#portfolio { padding-top: 140px; padding-bottom: 140px;}
+#portfolio .head {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 65px;
+}
+#portfolio .nav-item { margin-left: 5%; margin-right: 10%;}
+#portfolio .nav-link {
+    display: block;
+    padding: .5rem .1rem;
+    border-radius: unset;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+#portfolio .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #E20513;
+    background-color: unset;
+    border-bottom: 1px solid;
+}
+#portfolio .pg-item {
+    margin-bottom: 60px;
+}
+#portfolio .card {border: unset; padding: .5rem 1rem;}
+#portfolio .card-body {
+    background-color: #E20513;
+    margin-top: 2rem;
+    padding: 0.1rem 1rem;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#portfolio .card-title {
+    margin-bottom: 0;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+#portfolio .card-img-top {box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+#portfolio .card:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#portfolio .btn-dark {
+    background-color: #060606;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 22px 72px;
+}
+/* logos */
+#logos {background: #C9C9C9; padding: 120px 0;}
+.logos-wrap {display: flex; flex-wrap: nowrap; justify-content: space-around;}
+.logo-item {padding: 2rem;}
+.logo-img-wrap {width: 100%; height: 100%; display: flex;}
+#logos img {width: 100%; height: auto; align-self: center;}
+#logos .row {
+    padding-left: 5%;
+    padding-right: 5%;
+    --bs-gutter-x: unset;
+    --bs-gutter-y: unset;
+}
+/* contacts */
+#contacts {padding: 140px 0;}
+#contacts .head {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 60px;
+}
+.contacts_data {display: flex; justify-content: space-between;}
+.contacts_data .cd_head {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #060606;
+    margin-bottom: 10px;
+}
+.contacts_data .cd_text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+.contacts_data .cd_text a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.contacts_adr, .contacts_tel, .contacts_instagram, .contacts_mail {padding-left: 40px; padding-right: 40px; position: relative; max-width: 450px;}
+.contacts_adr::before {
+    content: url(/assets/img/adress.png);
+    position: absolute;
+    left: 0;
+}
+.contacts_tel::before {
+    content: url(/assets/img/phone.png);
+    position: absolute;
+    left: 0;
+}
+.contacts_instagram::before {
+    content: url(/assets/img/insta.png);
+    position: absolute;
+    left: -5px;
+}
+.contacts_mail::before {
+    content: url(/assets/img/mail.png);
+    position: absolute;
+    left: -5px;
+}
+/* footer */
+#footer {background: #060606; color: #fff; padding: 100px 0;}
+#footer a {text-decoration: none; color: #fff;}
+.footer-wrap {display: flex; justify-content: space-between;}
+.fb1, .fb3 { max-width: 280px; padding-top: 40px;}
+.fb2 {max-width: 480px;}
+#footer .fhead, #footer .head {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+#footer .nav-link {
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+}
+.fb2 {text-align: center;}
+.fb2 p {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 1rem;
+}
+.fb3 {display: flex; flex-direction: column; justify-content: space-between; text-align: end;}
+.fb3 p {
+    font-size: 20px;
+    line-height: 23px;
+}
+.fb3 .btn {
+    padding: 22px 62px;
+    border-radius: 0;
+}
+
+@media (min-width: 1601px) {
+    #baner-main > div {height: 840px;}
+}
