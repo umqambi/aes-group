@@ -1,10 +1,10 @@
 @font-face {
     font-family: Gilroy; /* Имя шрифта */
-    src: url('/assets/fonts/gilroy.otf'); /* Путь к файлу со шрифтом */
+    src: url('../assets/fonts/gilroy.otf'); /* Путь к файлу со шрифтом */
 }
 @font-face {
     font-family: GilroyExtraBold; /* Имя шрифта */
-    src: url('/assets/fonts/gilroy-extrabold.otf'); /* Путь к файлу со шрифтом */
+    src: url('../assets/fonts/gilroy-extrabold.otf'); /* Путь к файлу со шрифтом */
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -52,7 +52,7 @@ body {
 /* baner styles */
 
 #baner-main .bg-dark {
-    background-image: url(/assets/img/aes-baner-big.jpg);
+    background-image: url(../assets/img/aes-baner-big.jpg);
     background-position: center;
 }
 .baner-main_content {
@@ -289,22 +289,22 @@ body {
 
 .contacts_adr, .contacts_tel, .contacts_instagram, .contacts_mail {padding-left: 40px; padding-right: 40px; position: relative; max-width: 450px;}
 .contacts_adr::before {
-    content: url(/assets/img/adress.png);
+    content: url(../assets/img/adress.png);
     position: absolute;
     left: 0;
 }
 .contacts_tel::before {
-    content: url(/assets/img/phone.png);
+    content: url(../assets/img/phone.png);
     position: absolute;
     left: 0;
 }
 .contacts_instagram::before {
-    content: url(/assets/img/insta.png);
+    content: url(../assets/img/insta.png);
     position: absolute;
     left: -5px;
 }
 .contacts_mail::before {
-    content: url(/assets/img/mail.png);
+    content: url(../assets/img/mail.png);
     position: absolute;
     left: -5px;
 }
