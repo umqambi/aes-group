@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AES-EXPO</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">    
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
 </head>
@@ -52,7 +54,7 @@
                 <div class="baner-main_content container">
                     <h1 class="display-4">ЭКСКЛЮЗИВНЫЕ<br>ВЫСТАВОЧНЫЕ СТЕНДЫ</h1>
                     <p class="lead my-3">РАЗРАБОТКА <span class="text-red">НЕПОВТОРИМОГО<br>ДИЗАЙН-ПРОЕКТА</span></p>
-                    <button class="btn btn-red">ЗАКАЗАТЬ СТЕНД</button>
+                    <button type="button" class="btn btn-red" data-bs-toggle="modal" data-bs-target="#zakazModal">ЗАКАЗАТЬ СТЕНД</button>
                 </div>
             </div>
             
@@ -389,30 +391,24 @@
         </section>
 
         <section id="logos">
-            <div class="logos-wrap">
+            <div class="logos-wrap logosCarusel owl-carousel">
                 <div class="logo-item">
                     <div class="logo-img-wrap"><img src="./assets/img/partners/profsan.png" alt=""></div>
-                    
                 </div>
                 <div class="logo-item">
-                    <div class="logo-img-wrap"><img src="./assets/img/partners/pietro.png" alt=""></div>
-                    
+                    <div class="logo-img-wrap"><img src="./assets/img/partners/pietro.png" alt=""></div>                   
                 </div>
                 <div class="logo-item">
-                    <div class="logo-img-wrap"><img src="./assets/img/partners/infania.png" alt=""></div>
-                    
+                    <div class="logo-img-wrap"><img src="./assets/img/partners/infania.png" alt=""></div>  
                 </div>
                 <div class="logo-item">
                     <div class="logo-img-wrap"><img src="./assets/img/partners/ludinivo.png" alt=""></div>
-                    
                 </div>
                 <div class="logo-item">
                     <div class="logo-img-wrap"><img src="./assets/img/partners/fineber.png" alt=""></div>
-                
-            </div>
+                </div>
                 <div class="logo-item">
-                    <div class="logo-img-wrap"><img src="./assets/img/partners/artistyle.png" alt=""></div>
-                    
+                    <div class="logo-img-wrap"><img src="./assets/img/partners/artistyle.png" alt=""></div>                    
                 </div>
             </div>
         </section>
@@ -425,7 +421,7 @@
                 <div class="contacts_data">
                     <div class="">
                         <div class="contacts_adr">
-                            <div class="cd_head">адрес произвадства</div>
+                            <div class="cd_head">адрес производства</div>
                             <div class="cd_text">Московская область, пос. Лесные поляны,
                                 ул. Центральная, д.13 </div>
                         </div>
@@ -481,12 +477,77 @@
             <div class="footer-block fb3">
                 <div class="head">Обратная связь</div>
                 <p>Вы можете воспользоваться формой обратной связи</p>
-                <button class="btn btn-red">ЗАКАЗАТЬ СТЕНД</button>
+                <button class="btn btn-red" type="button" data-bs-toggle="modal" data-bs-target="#zakazModal">ЗАКАЗАТЬ СТЕНД</button>
             </div>
         </div>
     </div>
-    
+    <!-- modals -->
+    <div class="modal fade" id="zakazModal" tabindex="-1" aria-labelledby="zakazModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nameField" name="name" placeholder="Имя" required>
+                            <div class="valid-feedback">Верно</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" id="phone" name="phoneField" class="form-control"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="999-222-3333"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="textField" name="text" rows="3" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="mb-1 text-end">
+                            <button type="submit" class="btn btn-red">Отправить</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
 <!-- JS -->
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/jquery-3.6.0.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".logosCarusel").owlCarousel({
+            stagePadding: 50,
+            loop:true,
+            margin:10,
+            nav:false,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                400:{
+                    items:2
+                },
+                600:{
+                    items:3
+                },                
+                800:{
+                    items:4
+                },
+                1000:{
+                    items:5
+                },
+                1200:{
+                    items:6
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
